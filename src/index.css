@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #090c10;
+    color: #e2e8f0;
+    overflow-x: hidden;
+  }
+}
+
+.font-condensed {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Tactical subtle grid pattern */
+.tactical-grid {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.tactical-stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(250, 204, 21, 0.15),
+    rgba(250, 204, 21, 0.15) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+
+/* Military angled chamfer corners */
+.clip-tactical {
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+}
+
+.clip-badge {
+  clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+}
+
+/* Tactical glowing focus */
+.tactical-glow {
+  box-shadow: 0 0 25px rgba(0, 255, 128, 0.15);
+}
+
+.tactical-glow-amber {
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.18);
+}
